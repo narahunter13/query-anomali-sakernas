@@ -20,7 +20,7 @@ SELECT art.level_1_code                                                         
             AND r53.b5r25a_value = 1
             AND r53.b5r14a_value IS NOT NULL
             AND (r53.b5r14a_value < 84111 OR r53.b5r14a_value > 84300)
-        ) THEN 'A1;' END,
+        ) THEN 'A1,' END,
         -- Anomali 2
         CASE WHEN (
             art.b4k10 >= 5
@@ -32,7 +32,7 @@ SELECT art.level_1_code                                                         
             AND (r53.b5r14b_value = 1111 OR r53.b5r14b_value = 1112 OR r53.b5r14b_value = 2612)
             AND r51.b5r6a_value IS NOT NULL
             AND r51.b5r6a_value < 8
-        ) THEN 'A2;' END,
+        ) THEN 'A2,' END,
         -- Anomali 3
         CASE WHEN (
             art.b4k10 >= 5
@@ -42,7 +42,7 @@ SELECT art.level_1_code                                                         
                 r53.b5r14b_value = 2634)
             AND r51.b5r6a_value IS NOT NULL
             AND r51.b5r6a_value < 8
-        ) THEN 'A3;' END,
+        ) THEN 'A3,' END,
         -- Anomali 4
         CASE WHEN (
             art.b4k10 >= 5
@@ -52,7 +52,7 @@ SELECT art.level_1_code                                                         
                 (r53.b5r20_value IS NOT NULL AND r53.b5r20_value <> 1) OR
                 (r53.b5r14a_value IS NOT NULL AND (r53.b5r14a_value < 84111 OR r53.b5r14a_value > 84300)) OR
                 (r51.b5r6a_value IS NOT NULL AND r51.b5r6a_value < 8))
-        ) THEN 'A4;' END,
+        ) THEN 'A4,' END,
         -- Anomali 5
         CASE WHEN (
             art.b4k10 >= 5
@@ -60,14 +60,14 @@ SELECT art.level_1_code                                                         
             AND r53.b5r14a_value >= 05100
             AND r53.b5r16a_value IS NOT NULL
             AND r53.b5r16a_value < 5
-        ) THEN 'A5;' END,
+        ) THEN 'A5,' END,
         -- Anomali 6
         CASE WHEN (
             art.b4k10 >= 5
             AND r53.b5r14a_value IS NOT NULL
             AND (r53.b5r14a_value >= 01111 AND r53.b5r14a_value <= 03279)
             AND r53.b5r16a_value = 5
-        ) THEN 'A6;' END,
+        ) THEN 'A6,' END,
         -- Anomali 7
         CASE WHEN (
             art.b4k10 >= 5
@@ -75,7 +75,7 @@ SELECT art.level_1_code                                                         
             AND (r53.b5r14a_value >= 01111 AND r53.b5r14a_value <= 01302)
             AND r53.b5r16a_value IS NOT NULL
             AND r53.b5r16a_value > 2
-        ) THEN 'A7;' END,
+        ) THEN 'A7,' END,
         -- Anomali 8
         CASE WHEN (
             art.b4k10 >= 5
@@ -83,7 +83,7 @@ SELECT art.level_1_code                                                         
                 r53.b5r14a_value = 1122 OR r53.b5r14a_value = 1135)
             AND r53.b5r16a_value IS NOT NULL
             AND r53.b5r16a_value <> 1
-        ) THEN 'A8;' END,
+        ) THEN 'A8,' END,
         -- Anomali 9
         CASE WHEN (
             art.b4k10 >= 5
@@ -91,7 +91,7 @@ SELECT art.level_1_code                                                         
             AND (r53.b5r14a_value >= 02111 AND r53.b5r14a_value <= 02409)
             AND r53.b5r16a_value IS NOT NULL
             AND r53.b5r16a_value <> 2
-        ) THEN 'A9;' END,
+        ) THEN 'A9,' END,
         -- Anomali 10
         CASE WHEN (
             art.b4k10 >= 5
@@ -99,7 +99,7 @@ SELECT art.level_1_code                                                         
             AND (r53.b5r14a_value >= 01411 AND r53.b5r14a_value <= 01499)
             AND r53.b5r16a_value IS NOT NULL
             AND r53.b5r16a_value <> 3
-        ) THEN 'A10;' END,
+        ) THEN 'A10,' END,
         -- Anomali 11
         CASE WHEN (
             art.b4k10 >= 5
@@ -107,14 +107,14 @@ SELECT art.level_1_code                                                         
             AND (r53.b5r14a_value >= 03111 AND r53.b5r14a_value <= 03279)
             AND r53.b5r16a_value IS NOT NULL
             AND r53.b5r16a_value <> 4
-        ) THEN 'A11;' END,
+        ) THEN 'A11,' END,
         -- Anomali 12
         CASE WHEN (
             art.b4k10 >= 5
             AND r51.b5r6a_value = 4
             AND r51.b5r6b_j_kd_value IS NOT NULL
             AND (r51.b5r6b_j_kd_value > 4 AND r51.b5r6b_j_kd_value < 998)
-        ) THEN 'A12;' END,
+        ) THEN 'A12,' END,
         -- Anomali 13
         CASE WHEN (
             art.b4k10 >= 5
@@ -122,7 +122,7 @@ SELECT art.level_1_code                                                         
             AND r51.b5r6b_j_kd_value IS NOT NULL
             AND r51.b5r6b_j_kd_value > 52 
             AND r51.b5r6b_j_kd_value < 998
-        ) THEN 'A13;' END,
+        ) THEN 'A13,' END,
         -- Anomali 14
         CASE WHEN (
             art.b4k10 >= 5
@@ -130,7 +130,7 @@ SELECT art.level_1_code                                                         
             AND r51.b5r6b_p_value = 4
             AND r51.b5r6b_j_kd_value IS NOT NULL
             AND (r51.b5r6b_j_kd_value <> 999)
-        ) THEN 'A14;' END,
+        ) THEN 'A14,' END,
         -- Anomali 15
         CASE WHEN (
             art.b4k10 >= 5
@@ -138,7 +138,7 @@ SELECT art.level_1_code                                                         
             AND r51.b5r6b_p_value = 4
             AND r51.b5r6b_j_kd_value IS NOT NULL
             AND (r51.b5r6b_j_kd_value <> 999)
-        ) THEN 'A15;' END,
+        ) THEN 'A15,' END,
         -- Anomali 16
         CASE WHEN (
             art.b4k10 >= 5
@@ -146,21 +146,21 @@ SELECT art.level_1_code                                                         
             AND r51.b5r6b_p_value = 4
             AND r51.b5r6b_j_kd_value IS NOT NULL
             AND (r51.b5r6b_j_kd_value <> 999)
-        ) THEN 'A16;' END,
+        ) THEN 'A16,' END,
         -- Anomali 17
         CASE WHEN (
             art.b4k10 >= 5
             AND ((r53.b5r14a_value >= 64110 AND r53.b5r14a_value <= 64132) OR
                 (r53.b5r14a_value >= 84111 AND r53.b5r14a_value <= 84234) OR r53.b5r14a_value = 99000)
             AND r51.b5r6a_value = 1
-        ) THEN 'A17;' END,
+        ) THEN 'A17,' END,
         -- Anomali 18
         CASE WHEN (
             art.b4k10 >= 5
             AND (r53.b5r14b_value = 111 OR r53.b5r14b_value = 112 OR r53.b5r14b_value = 113 OR r53.b5r14b_value = 114 OR
                 r53.b5r14b_value = 115)
             AND r51.b5r6a_value < 4
-        ) THEN 'A18;' END,
+        ) THEN 'A18,' END,
         -- Anomali 19
         CASE WHEN (
             art.b4k10 >= 5
@@ -168,7 +168,7 @@ SELECT art.level_1_code                                                         
                 r53.b5r14b_value = 215 OR r53.b5r14b_value = 311 OR r53.b5r14b_value = 312 OR r53.b5r14b_value = 313 OR
                 r53.b5r14b_value = 314 OR r53.b5r14b_value = 315)
             AND r51.b5r6a_value < 3
-        ) THEN 'A19;' END,
+        ) THEN 'A19,' END,
         -- Anomali 20
         CASE WHEN (
             art.b4k10 >= 5
@@ -177,21 +177,21 @@ SELECT art.level_1_code                                                         
                 (r53.b5r14b_value >= 2111 AND r53.b5r14b_value <= 2356) OR
                 (r53.b5r14b_value >= 2411 AND r53.b5r14b_value <= 2643))
             AND r51.b5r6a_value < 4
-        ) THEN 'A20;' END,
+        ) THEN 'A20,' END,
         -- Anomali 21
         CASE WHEN (
             art.b4k10 >= 5
             AND r53.b5r14b_value IS NOT NULL
             AND (r53.b5r14b_value >= 1113 AND r53.b5r14b_value <= 1431)
             AND r51.b5r6a_value < 2
-        ) THEN 'A21;' END,
+        ) THEN 'A21,' END,
         -- Anomali 22
         CASE WHEN (
             art.b4k10 >= 5
             AND (r53.b5r14b_value = 111 OR r53.b5r14b_value = 112 OR r53.b5r14b_value = 113 OR r53.b5r14b_value = 114 OR
                 r53.b5r14b_value = 115)
             AND art.b4k10 < 18
-        ) THEN 'A22;' END,
+        ) THEN 'A22,' END,
         -- Anomali 23
         CASE WHEN (
             art.b4k10 >= 5
@@ -199,7 +199,7 @@ SELECT art.level_1_code                                                         
                 r53.b5r14b_value = 215 OR r53.b5r14b_value = 311 OR r53.b5r14b_value = 312 OR r53.b5r14b_value = 313 OR
                 r53.b5r14b_value = 314 OR r53.b5r14b_value = 315)
             AND art.b4k10 < 16
-        ) THEN 'A23;' END,
+        ) THEN 'A23,' END,
         -- Anomali 24
         CASE WHEN (
             art.b4k10 >= 5
@@ -208,7 +208,7 @@ SELECT art.level_1_code                                                         
                 (r53.b5r14b_value >= 2411 AND r53.b5r14b_value <= 2643) OR
                 (r53.b5r14b_value >= 3111 AND r53.b5r14b_value <= 3413))
             AND art.b4k10 < 15
-        ) THEN 'A24;' END,
+        ) THEN 'A24,' END,
         -- Anomali 25
         CASE WHEN (
             art.b4k10 >= 5
@@ -218,13 +218,13 @@ SELECT art.level_1_code                                                         
                 (r53.b5r14b_value >= 9211 AND r53.b5r14b_value <= 9216))
             AND r53.b5r14a_value IS NOT NULL
             AND (r53.b5r14a_value < 1111 OR r53.b5r14a_value > 3279)
-        ) THEN 'A25;' END,
+        ) THEN 'A25,' END,
         -- Anomali 26
         CASE WHEN (
             art.b4k10 >= 5
             AND r53.b5r14a_value IS NOT NULL
             AND ((r53.b5r14b_value >= 111 AND r53.b5r14b_value <= 315) AND (r53.b5r14a_value < 84221 OR r53.b5r14a_value > 84233))
-        ) THEN 'A26;' END,
+        ) THEN 'A26,' END,
         -- Anomali 27
         CASE WHEN (
             art.b4k10 >= 5
@@ -233,7 +233,7 @@ SELECT art.level_1_code                                                         
             AND (r53.b5r14a_value < 85230 OR (r53.b5r14a_value > 85230 AND r53.b5r14a_value < 85240) OR
                 (r53.b5r14a_value > 85240 AND r53.b5r14a_value < 85311) OR
                 (r53.b5r14a_value > 85312 AND r53.b5r14a_value < 85321) OR r53.b5r14a_value > 85322)
-        ) THEN 'A27;' END,
+        ) THEN 'A27,' END,
         -- Anomali 28
         CASE WHEN (
             art.b4k10 >= 5
@@ -248,7 +248,7 @@ SELECT art.level_1_code                                                         
                 (r53.b5r14a_value > 85240 AND r53.b5r14a_value < 85251) OR
                 (r53.b5r14a_value > 85251 AND r53.b5r14a_value < 85252) OR
                 (r53.b5r14a_value > 85252 AND r53.b5r14a_value < 85270) OR r53.b5r14a_value > 85270)
-        ) THEN 'A28;' END,
+        ) THEN 'A28,' END,
         -- Anomali 29
         CASE WHEN (
             art.b4k10 >= 5
@@ -256,7 +256,7 @@ SELECT art.level_1_code                                                         
             AND r53.b5r13a_value = 5
             AND r53.b5r14a_value IS NOT NULL
             AND r53.b5r14a_value >= 5100
-        ) THEN 'A29;' END,
+        ) THEN 'A29,' END,
         -- Anomali 30
         CASE WHEN (
             art.b4k10 >= 5
@@ -265,7 +265,7 @@ SELECT art.level_1_code                                                         
             AND r53.b5r14a_value IS NOT NULL
             AND ((r53.b5r14a_value >= 1111 AND r53.b5r14a_value <= 3279) OR
                 (r53.b5r14a_value >= 84111 AND r53.b5r14a_value <= 84300))
-        ) THEN 'A30;' END,
+        ) THEN 'A30,' END,
         -- Anomali 31
         CASE WHEN (
             art.b4k10 >= 5
@@ -273,14 +273,14 @@ SELECT art.level_1_code                                                         
             AND (r53.b5r14a_value >= 84111 AND r53.b5r14a_value <= 84300)
             AND r53.b5r13a_value IS NOT NULL
             AND r53.b5r13a_value <> 4
-        ) THEN 'A31;' END,
+        ) THEN 'A31,' END,
         -- Anomali 32
         CASE WHEN (
             art.b4k10 >= 5
             AND r53.b5r14b_value = 2612
             AND r53.b5r14a_value IS NOT NULL
             AND r53.b5r14a_value <> 84233
-        ) THEN 'A32;' END,
+        ) THEN 'A32,' END,
         -- Anomali 33
         CASE WHEN (
             art.b4k10 >= 5
@@ -290,7 +290,7 @@ SELECT art.level_1_code                                                         
             AND r53.b5r13a_value = 4
             AND art.b4k5_value IS NOT NULL
             AND art.b4k5_value = 2
-        ) THEN 'A33;' END,
+        ) THEN 'A33,' END,
         -- Anomali 34
         CASE WHEN (
             art.b4k10 >= 5
@@ -298,7 +298,7 @@ SELECT art.level_1_code                                                         
             AND r53.b5r14a_value IS NOT NULL
             AND (r53.b5r14a_value >= 84111 AND r53.b5r14a_value <= 84300)
             AND r53.b5r23a1_value <> 1
-        ) THEN 'A34;' END,
+        ) THEN 'A34,' END,
         -- Anomali 35
         CASE WHEN (
             art.b4k10 >= 5
@@ -308,14 +308,334 @@ SELECT art.level_1_code                                                         
             AND r53.b5r13a_value = 4
             AND r53.b5r23b_value IS NOT NULL
             AND r53.b5r23b_value <> 1
-        ) THEN 'A35;' END,
+        ) THEN 'A35,' END,
         -- Anomali 36
         CASE WHEN (
             art.b4k10 >= 5
             AND ((r54.b5r32a_value >= 64110 AND r54.b5r32a_value <= 64132) OR
                 (r54.b5r32a_value >= 84111 AND r54.b5r32a_value <= 84234) OR r54.b5r32a_value = 99000)
             AND r51.b5r6a_value = 1
-        ) THEN 'A36;' END,
+        ) THEN 'A36,' END,
+        -- Anomali 37
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r54.b5r32b_value = 111 OR r54.b5r32b_value = 112 OR r54.b5r32b_value = 113 OR r54.b5r32b_value = 114 OR
+                r54.b5r32b_value = 115)
+            AND r51.b5r6a_value < 4
+        ) THEN 'A37,' END,
+        -- Anomali 38
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r54.b5r32b_value = 211 OR r54.b5r32b_value = 212 OR r54.b5r32b_value = 213 OR r54.b5r32b_value = 214 OR
+                r54.b5r32b_value = 215 OR r54.b5r32b_value = 311 OR r54.b5r32b_value = 312 OR r54.b5r32b_value = 313 OR
+                r54.b5r32b_value = 314 OR r54.b5r32b_value = 315)
+            AND r51.b5r6a_value < 3
+        ) THEN 'A38,' END,
+        -- Anomali 39
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32b_value IS NOT NULL
+            AND ((r54.b5r32b_value >= 1111 AND r54.b5r32b_value <= 1112) OR
+                (r54.b5r32b_value >= 2111 AND r54.b5r32b_value <= 2356) OR
+                (r54.b5r32b_value >= 2411 AND r54.b5r32b_value <= 2643))
+            AND r51.b5r6a_value < 4
+        ) THEN 'A39,' END,
+        -- Anomali 40
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32b_value IS NOT NULL
+            AND (r54.b5r32b_value >= 1113 AND r54.b5r32b_value <= 1431)
+            AND r51.b5r6a_value < 2
+        ) THEN 'A40,' END,
+        -- Anomali 41
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r54.b5r32b_value = 111 OR r54.b5r32b_value = 112 OR r54.b5r32b_value = 113 OR r54.b5r32b_value = 114 OR
+                r54.b5r32b_value = 115)
+            AND art.b4k10 < 18
+        ) THEN 'A41,' END,
+        -- Anomali 42
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r54.b5r32b_value = 211 OR r54.b5r32b_value = 212 OR r54.b5r32b_value = 213 OR r54.b5r32b_value = 214 OR
+                r54.b5r32b_value = 215 OR r54.b5r32b_value = 311 OR r54.b5r32b_value = 312 OR r54.b5r32b_value = 313 OR
+                r54.b5r32b_value = 314 OR r54.b5r32b_value = 315)
+            AND art.b4k10 < 16
+        ) THEN 'A42,' END,
+        -- Anomali 43
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND ((r54.b5r32b_value >= 1111 AND r54.b5r32b_value <= 1431) OR
+                (r54.b5r32b_value >= 2111 AND r54.b5r32b_value <= 2356) OR
+                (r54.b5r32b_value >= 2411 AND r54.b5r32b_value <= 2643) OR
+                (r54.b5r32b_value >= 3111 AND r54.b5r32b_value <= 3413))
+            AND art.b4k10 < 15
+        ) THEN 'A43,' END,
+        -- Anomali 44
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32b_value IS NOT NULL
+            AND (r54.b5r32b_value = 1311 OR r54.b5r32b_value = 1312 OR r54.b5r32b_value = 3142 OR r54.b5r32b_value = 3143 OR
+                (r54.b5r32b_value >= 6111 AND r54.b5r32b_value <= 6340) OR
+                (r54.b5r32b_value >= 9211 AND r54.b5r32b_value <= 9216))
+            AND r54.b5r32a_value IS NOT NULL
+            AND (r54.b5r32a_value < 1111 OR r54.b5r32a_value > 3279)
+        ) THEN 'A44,' END,
+        -- Anomali 45
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32a_value IS NOT NULL
+            AND ((r54.b5r32b_value >= 111 AND r54.b5r32b_value <= 315) AND (r54.b5r32a_value < 84220 OR r54.b5r32a_value > 84233))
+        ) THEN 'A45,' END,
+        -- Anomali 46
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32a_value IS NOT NULL
+            AND r54.b5r32b_value = 2320
+            AND (r54.b5r32a_value < 85230 OR (r54.b5r32a_value > 85230 AND r54.b5r32a_value < 85240) OR
+                (r54.b5r32a_value > 85240 AND r54.b5r32a_value < 85311) OR
+                (r54.b5r32a_value > 85312 AND r54.b5r32a_value < 85321) OR r54.b5r32a_value > 85322)
+        ) THEN 'A46,' END,
+        -- Anomali 47
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32b_value IS NOT NULL
+            AND r54.b5r32b_value = 2330
+            AND r54.b5r32a_value IS NOT NULL
+            AND (r54.b5r32a_value < 85112 OR (r54.b5r32a_value > 85112 AND r54.b5r32a_value < 85122) OR
+                (r54.b5r32a_value > 85122 AND r54.b5r32a_value < 85210) OR
+                (r54.b5r32a_value > 85210 AND r54.b5r32a_value < 85220) OR
+                (r54.b5r32a_value > 85220 AND r54.b5r32a_value < 85230) OR
+                (r54.b5r32a_value > 85230 AND r54.b5r32a_value < 85240) OR
+                (r54.b5r32a_value > 85240 AND r54.b5r32a_value < 85251) OR
+                (r54.b5r32a_value > 85251 AND r54.b5r32a_value < 85252) OR
+                (r54.b5r32a_value > 85252 AND r54.b5r32a_value < 85270) OR r54.b5r32a_value > 85270)
+        ) THEN 'A47,' END,
+        -- Anomali 48
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r31a_value IS NOT NULL
+            AND r54.b5r31a_value = 5
+            AND r54.b5r32a_value IS NOT NULL
+            AND r54.b5r32a_value >= 5100
+        ) THEN 'A48,' END,
+        -- Anomali 49
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r31a_value IS NOT NULL
+            AND r54.b5r31a_value = 6
+            AND r54.b5r32a_value IS NOT NULL
+            AND ((r54.b5r32a_value >= 1111 AND r54.b5r32a_value <= 3279) OR
+                (r54.b5r32a_value >= 84111 AND r54.b5r32a_value <= 84300))
+        ) THEN 'A49,' END,
+        -- Anomali 50
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32a_value IS NOT NULL
+            AND (r54.b5r32a_value >= 84111 AND r54.b5r32a_value <= 84300)
+            AND r53.b5r13a_value IS NOT NULL
+            AND r54.b5r31a_value <> 4
+        )  THEN 'A50,' END,
+        -- Anomali 51
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32b_value = 2612
+            AND r54.b5r32a_value IS NOT NULL
+            AND r54.b5r32a_value <> 84233
+        ) THEN 'A51,' END,
+        -- Anomali 52
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r54.b5r32a_value IS NOT NULL
+            AND (r54.b5r32a_value >= 84111 AND r54.b5r32a_value <= 84300)
+            AND r53.b5r13a_value IS NOT NULL
+            AND r54.b5r31a_value = 4
+            AND art.b4k5_value IS NOT NULL
+            AND art.b4k5_value = 2
+        ) THEN 'A52,' END,
+        -- Anomali 53
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND ((r57.b5r47a_value >= 64110 AND r57.b5r47a_value <= 64132) OR
+                (r57.b5r47a_value >= 84111 AND r57.b5r47a_value <= 84234) OR r57.b5r47a_value = 99000)
+            AND r51.b5r6a_value = 1
+        ) THEN 'A53,' END,
+        -- Anomali 54
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r57.b5r47b_value = 111 OR r57.b5r47b_value = 112 OR r57.b5r47b_value = 113 OR r57.b5r47b_value = 114 OR
+                r57.b5r47b_value = 115)
+            AND r51.b5r6a_value < 4
+        ) THEN 'A54,' END,
+        -- Anomali 55
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r53.b5r14b_value = 211 OR r57.b5r47b_value = 212 OR r57.b5r47b_value = 213 OR r57.b5r47b_value = 214 OR
+                r57.b5r47b_value = 215 OR r57.b5r47b_value = 311 OR r57.b5r47b_value = 312 OR r57.b5r47b_value = 313 OR
+                r57.b5r47b_value = 314 OR r57.b5r47b_value = 315)
+            AND r51.b5r6a_value < 3
+        ) THEN 'A55,' END,
+        -- Anomali 56
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r47b_value IS NOT NULL
+            AND ((r57.b5r47b_value >= 1111 AND r57.b5r47b_value <= 1112) OR
+                (r57.b5r47b_value >= 2111 AND r57.b5r47b_value <= 2356) OR
+                (r57.b5r47b_value >= 2411 AND r57.b5r47b_value <= 2643))
+            AND r51.b5r6a_value < 4
+        ) THEN 'A56,' END,
+        -- Anomali 57
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r47b_value IS NOT NULL
+            AND (r57.b5r47b_value >= 1113 AND r57.b5r47b_value <= 1431)
+            AND r51.b5r6a_value < 2
+        ) THEN 'A57,' END,
+        -- Anomali 58
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r57.b5r47b_value = 111 OR r57.b5r47b_value = 112 OR r57.b5r47b_value = 113 OR r57.b5r47b_value = 114 OR
+                r57.b5r47b_value = 115)
+            AND art.b4k10 < 18
+        ) THEN 'A58,' END,
+        -- Anomali 59
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r53.b5r14b_value = 211 OR r57.b5r47b_value = 212 OR r57.b5r47b_value = 213 OR r57.b5r47b_value = 214 OR
+                r57.b5r47b_value = 215 OR r57.b5r47b_value = 311 OR r57.b5r47b_value = 312 OR r57.b5r47b_value = 313 OR
+                r57.b5r47b_value = 314 OR r57.b5r47b_value = 315)
+            AND art.b4k10 < 16
+        ) THEN 'A59,' END,
+        -- Anomali 60
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND ((r57.b5r47b_value >= 1111 AND r57.b5r47b_value <= 1431) OR
+                (r57.b5r47b_value >= 2111 AND r57.b5r47b_value <= 2356) OR
+                (r57.b5r47b_value >= 2411 AND r57.b5r47b_value <= 2643) OR
+                (r57.b5r47b_value >= 3111 AND r57.b5r47b_value <= 3413))
+            AND art.b4k10 < 15
+        ) THEN 'A60,' END,
+        -- Anomali 61
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r47b_value IS NOT NULL
+            AND (r57.b5r47b_value = 1311 OR r57.b5r47b_value = 1312 OR r57.b5r47b_value = 3142 OR r57.b5r47b_value = 3143 OR
+                (r57.b5r47b_value >= 6111 AND r57.b5r47b_value <= 6340) OR
+                (r57.b5r47b_value >= 9211 AND r57.b5r47b_value <= 9216))
+            AND r57.b5r47a_value IS NOT NULL
+            AND (r57.b5r47a_value < 1111 OR r57.b5r47a_value > 3279)
+        ) THEN 'A61,' END,
+        -- Anomali 62
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r47b_value IS NOT NULL
+            AND ((r57.b5r47b_value >= 111 AND r57.b5r47b_value <= 315) AND r57.b5r47a_value IS NOT NULL AND
+                (r57.b5r47a_value < 84220 OR r57.b5r47a_value > 84233))
+        ) THEN 'A62,' END,
+        -- Anomali 63
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r47a_value IS NOT NULL
+            AND r57.b5r47b_value = 2320
+            AND (r57.b5r47a_value < 85230 OR (r57.b5r47a_value > 85230 AND r57.b5r47a_value < 85240) OR
+                (r57.b5r47a_value > 85240 AND r57.b5r47a_value < 85311) OR
+                (r57.b5r47a_value > 85312 AND r57.b5r47a_value < 85321) OR r57.b5r47a_value > 85322)
+        ) THEN 'A63,' END,
+        -- Anomali 64
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r47b_value IS NOT NULL
+            AND r57.b5r47b_value = 2330
+            AND r57.b5r47a_value IS NOT NULL
+            AND (r57.b5r47a_value < 85112 OR (r57.b5r47a_value > 85112 AND r57.b5r47a_value < 85122) OR
+                (r57.b5r47a_value > 85122 AND r57.b5r47a_value < 85210) OR
+                (r57.b5r47a_value > 85210 AND r57.b5r47a_value < 85220) OR
+                (r57.b5r47a_value > 85220 AND r57.b5r47a_value < 85230) OR
+                (r57.b5r47a_value > 85230 AND r57.b5r47a_value < 85240) OR
+                (r57.b5r47a_value > 85240 AND r57.b5r47a_value < 85251) OR
+                (r57.b5r47a_value > 85251 AND r57.b5r47a_value < 85252) OR
+                (r57.b5r47a_value > 85252 AND r57.b5r47a_value < 85270) OR r57.b5r47a_value > 85270)
+        ) THEN 'A64,' END,
+        -- Anomali 65
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r46d_value IS NOT NULL
+            AND r57.b5r46d_value = 5
+            AND r57.b5r47a_value IS NOT NULL
+            AND (r57.b5r47a_value < 1111 OR r57.b5r47a_value > 3279)
+        ) THEN 'A65,' END,
+        -- Anomali 66
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r46d_value IS NOT NULL
+            AND r57.b5r46d_value = 6
+            AND r57.b5r47a_value IS NOT NULL
+            AND ((r57.b5r47a_value >= 1111 AND r57.b5r47a_value <= 3279) OR
+                (r57.b5r47a_value >= 84111 AND r57.b5r47a_value <= 84300))
+        ) THEN 'A66,' END,
+        -- Anomali 67
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r47a_value IS NOT NULL
+            AND (r57.b5r47a_value >= 84111 AND r57.b5r47a_value <= 84300)
+            AND r57.b5r46d_value IS NOT NULL
+            AND r57.b5r46d_value <> 4
+        ) THEN 'A67,' END,
+        -- Anomali 68
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r47b_value = 2612
+            AND r57.b5r47a_value IS NOT NULL
+            AND r57.b5r47a_value <> 84233
+        ) THEN 'A68,' END,
+        -- Anomali 69
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r51.b5r6a_value >= 4 AND r51.b5r6a_value <= 12)
+            AND r51.b5r6b_j_kd_value IS NULL
+        ) THEN 'A69,' END,
+        -- Anomali 70
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r51.b5r6g_jml = 1
+            AND (r51.b5r6g1_kd_value IS NULL)
+            AND asg.assignment_status_id = 2
+        ) THEN 'A70,' END,
+        -- Anomali 71
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r51.b5r6g_jml = 2
+            AND (r51.b5r6g1_kd_value IS NULL)
+            AND asg.assignment_status_id = 2
+        ) THEN 'A71,' END,
+        -- Anomali 72
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r51.b5r6g_jml = 2
+            AND (r51.b5r6g2_kd_value IS NULL)
+            AND asg.assignment_status_id = 2
+        ) THEN 'A72,' END,
+        -- Anomali 73
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r51.b5r6g_jml = 3
+            AND (r51.b5r6g1_kd_value IS NULL)
+            AND asg.assignment_status_id = 2
+        ) THEN 'A73,' END,
+        -- Anomali 74
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r51.b5r6g_jml = 3
+            AND (r51.b5r6g2_kd_value IS NULL)
+            AND asg.assignment_status_id = 2
+        ) THEN 'A74,' END,
+        -- Anomali 75
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r51.b5r6g_jml = 3
+            AND (r51.b5r6g3_kd_value IS NULL)
+            AND asg.assignment_status_id = 2
+        ) THEN 'A75,' END
        ) as Anomali,
        CONCAT('<a href="https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               art.assignment_id
@@ -323,13 +643,27 @@ SELECT art.level_1_code                                                         
 FROM tlg_ed6f1363.art_roster art
          LEFT JOIN tlg_ed6f1363.root_table r_root
                    ON r_root.assignment_id = art.assignment_id
+         LEFT JOIN tlg_ed6f1363.base_table_assignment asg
+                ON asg.id = art.assignment_id
          LEFT JOIN tlg_ed6f1363.art_5th_1_roster r51
                    ON r51.assignment_id = art.assignment_id
                        AND r51.index1 = art.index1
+         LEFT JOIN tlg_ed6f1363.art_5th_2_roster r52
+                   ON r52.assignment_id = art.assignment_id
+                       AND r52.index1 = art.index1
          LEFT JOIN tlg_ed6f1363.art_5th_3_roster r53
                    ON r53.assignment_id = art.assignment_id
                        AND r53.index1 = art.index1
          LEFT JOIN tlg_ed6f1363.art_5th_4_roster r54
                    ON r54.assignment_id = art.assignment_id
                        AND r54.index1 = art.index1
+         LEFT JOIN tlg_ed6f1363.art_5th_5_roster r55
+                   ON r55.assignment_id = art.assignment_id
+                       AND r55.index1 = art.index1
+         LEFT JOIN tlg_ed6f1363.art_5th_6_roster r56
+                   ON r56.assignment_id = art.assignment_id
+                       AND r56.index1 = art.index1
+         LEFT JOIN tlg_ed6f1363.art_5th_7_roster r57
+                   ON r57.assignment_id = art.assignment_id
+                       AND r57.index1 = art.index1
 ORDER BY art.level_6_full_code, r_root.no_dsrt, art.index1
