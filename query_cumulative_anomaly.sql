@@ -635,7 +635,130 @@ SELECT art.level_1_code                                                         
             AND r51.b5r6g_jml = 3
             AND (r51.b5r6g3_kd_value IS NULL)
             AND asg.assignment_status_id = 2
-        ) THEN 'A75,' END
+        ) THEN 'A75,' END,
+        -- Anomali 76
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND b5r6g1_s.pair_value = 'A'
+            AND r51.b5r6g1_kd_value IS NULL
+        ) THEN 'A76,' END,
+        -- Anomali 77
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND b5r6g1_s.pair_value = 'A'
+            AND r51.b5r6g1_kd_value IS NULL
+        ) THEN 'A77,' END,
+        -- Anomali 78
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND b5r6g3_s.pair_value = 'A'
+            AND r51.b5r6g3_kd_value IS NULL
+        ) THEN 'A78,' END,
+        -- Anomali 79
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r52.b5r9a_value = 1 OR r52.b5r9b_value = 1 OR r52.b5r9c_value = 1 OR r52.b5r10_value = 1)
+            AND r53.b5r14a_value IS NULL
+            AND asg.assignment_status_id = 2
+        ) THEN 'A79,' END,
+        -- Anomali 80
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r52.b5r9a_value = 1 OR r52.b5r9b_value = 1 OR r52.b5r9c_value = 1 OR r52.b5r10_value = 1)
+            AND r53.b5r14b_value IS NULL
+            AND asg.assignment_status_id = 2
+        ) THEN 'A80,' END,
+        -- Anomali 81
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r53.b5r20_value = 1
+            AND r54.b5r32a_value IS NULL
+            AND asg.assignment_status_id = 2
+        ) THEN 'A81,' END,
+        -- Anomali 82
+        CASE WHEN (
+            art.b4k10>=5
+            AND r53.b5r20_value=1
+            AND r54.b5r32b_value IS NULL
+            AND asg.assignment_status_id = 2
+        ) THEN 'A82,' END,
+        -- Anomali 83
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r45a_value = 1
+            AND r57.b5r47a_value IS NULL
+            AND asg.assignment_status_id = 2
+        ) THEN 'A83,' END,
+        -- Anomali 84
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r57.b5r45a_value = 1
+            AND r57.b5r47b_value IS NULL
+            AND asg.assignment_status_id = 2
+        ) THEN 'A84,' END,
+        -- Anomali 85
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r59.b5r51b_value = 1
+            AND r59.b5r55a_value IS NULL
+            AND asg.assignment_status_id = 2
+        ) THEN 'A85,' END,
+        -- Anomali 86
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND r59.b5r51b_value = 1
+            AND r59.b5r55b_value IS NULL
+            AND asg.assignment_status_id = 2
+        ) THEN 'A86,' END,
+        -- Anomali 88
+        CASE WHEN (
+            r51.b5r2a_value = r51.b5r1a
+            AND (r53.b5r21_value = 4 OR r53.b5r24a_value = 3 OR r53.b5r24b_value = 6 OR r53.b5r24c_value = 3 OR
+                r53.b5r24d_value = 6 OR r53.b5r24e_value = 3 OR r53.b5r24f_value = 6 OR r53.b5r24g_value = 3 OR
+                r53.b5r24h_value = 6 OR r53.b5r24i_value = 3)
+        ) THEN 'A88,' END,
+        -- Anomali 89
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r53.b5r14b_value = 2310 OR r53.b5r14b_value = 2320 OR r53.b5r14b_value = 2330 OR r53.b5r14b_value = 2341 OR
+                r53.b5r14b_value = 2612 OR r53.b5r14b_value = 3152 OR r53.b5r14b_value = 3153 OR r53.b5r14b_value = 3154 OR
+                r53.b5r14b_value = 3118 OR r53.b5r14b_value = 3155 OR r53.b5r14b_value = 3315 OR r53.b5r14b_value = 3323 OR
+                r53.b5r14b_value = 3351 OR r53.b5r14b_value = 3352 OR r53.b5r14b_value = 3353 OR r53.b5r14b_value = 3359 OR
+                r53.b5r14b_value = 4131 OR r53.b5r14b_value = 4211 OR r53.b5r14b_value = 4213 OR r53.b5r14b_value = 4223 OR
+                r53.b5r14b_value = 4224 OR (r53.b5r14b_value >= 4311 AND r53.b5r14b_value <= 4419) OR r53.b5r14b_value = 5120 OR
+                r53.b5r14b_value = 5411 OR r53.b5r14b_value = 5413 OR r53.b5r14b_value = 5414 OR r53.b5r14b_value = 8311 OR
+                r53.b5r14b_value = 8312)
+            AND r53.b5r13a_value IS NOT NULL
+            AND r53.b5r13a_value <> 4
+        ) THEN 'A89,' END,
+        -- Anomali 90
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r54.b5r32b_value = 2310 OR r54.b5r32b_value = 2320 OR r54.b5r32b_value = 2330 OR r54.b5r32b_value = 2341 OR
+                r54.b5r32b_value = 2612 OR r54.b5r32b_value = 3152 OR r54.b5r32b_value = 3153 OR r54.b5r32b_value = 3154 OR
+                r54.b5r32b_value = 3118 OR r54.b5r32b_value = 3155 OR r54.b5r32b_value = 3315 OR r54.b5r32b_value = 3323 OR
+                r54.b5r32b_value = 3351 OR r54.b5r32b_value = 3352 OR r54.b5r32b_value = 3353 OR r54.b5r32b_value = 3359 OR
+                r54.b5r32b_value = 4131 OR r54.b5r32b_value = 4211 OR r54.b5r32b_value = 4213 OR r54.b5r32b_value = 4223 OR
+                r54.b5r32b_value = 4224 OR (r54.b5r32b_value >= 4311 AND r54.b5r32b_value <= 4419) OR r54.b5r32b_value = 5120 OR
+                r54.b5r32b_value = 5411 OR r54.b5r32b_value = 5413 OR r54.b5r32b_value = 5414 OR r54.b5r32b_value = 8311 OR
+                r54.b5r32b_value = 8312)
+            AND r54.b5r31a_value IS NOT NULL
+            AND r54.b5r31a_value <> 4
+        ) THEN 'A90,' END,
+        -- Anomali 91
+        CASE WHEN (
+            art.b4k10 >= 5
+            AND (r57.b5r47b_value = 2310 OR r57.b5r47b_value = 2320 OR r57.b5r47b_value = 2330 OR r57.b5r47b_value = 2341 OR
+                r57.b5r47b_value = 2612 OR r57.b5r47b_value = 3152 OR r57.b5r47b_value = 3153 OR r57.b5r47b_value = 3154 OR
+                r57.b5r47b_value = 3118 OR r57.b5r47b_value = 3155 OR r57.b5r47b_value = 3315 OR r57.b5r47b_value = 3323 OR
+                r57.b5r47b_value = 3351 OR r57.b5r47b_value = 3352 OR r57.b5r47b_value = 3353 OR r57.b5r47b_value = 3359 OR
+                r57.b5r47b_value = 4131 OR r57.b5r47b_value = 4211 OR r57.b5r47b_value = 4213 OR r57.b5r47b_value = 4223 OR
+                r57.b5r47b_value = 4224 OR (r57.b5r47b_value >= 4311 AND r57.b5r47b_value <= 4419) OR r57.b5r47b_value = 5120 OR
+                r57.b5r47b_value = 5411 OR r57.b5r47b_value = 5413 OR r57.b5r47b_value = 5414 OR r57.b5r47b_value = 8311 OR
+                r57.b5r47b_value = 8312)
+            AND r57.b5r46d_value IS NOT NULL
+            AND r57.b5r46d_value <> 4
+        ) THEN 'A91,' END,
        ) as Anomali,
        CONCAT('<a href="https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               art.assignment_id
@@ -666,4 +789,10 @@ FROM tlg_ed6f1363.art_roster art
          LEFT JOIN tlg_ed6f1363.art_5th_7_roster r57
                    ON r57.assignment_id = art.assignment_id
                        AND r57.index1 = art.index1
+        LEFT JOIN (SELECT pair_value, pair_label, assignment_id, index1
+                    FROM tlg_ed6f1363.pair_label_value_1
+                    WHERE data_key = 'b5r6g1_s'
+                      AND pair_value = 'A') b5r6g1_s
+                   ON b5r6g1_s.assignment_id = art.assignment_id
+                       AND b5r6g1_s.index1 = art.index1
 ORDER BY art.level_6_full_code, r_root.no_dsrt, art.index1

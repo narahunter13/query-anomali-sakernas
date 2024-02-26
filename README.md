@@ -1,5 +1,6 @@
 # QUERY SAKERNAS FEBRUARI 2024
-Query ini dibuat karena menurut saya sangat memakan waktu untuk melakukan *running query* sebanyak **87 query (sesuai penjelasan saat briefing)**. Query saat ini baru tersedia 75 query dari pusat.
+Query ini dibuat karena menurut saya sangat memakan waktu untuk melakukan *running query* sebanyak **91 query**.
+**Catatan: Query 87 sedang dilakukan pengecekan oleh pusat**
 
 ## Cara Penggunaan
 Query tinggal dilakukan **copy-paste** seluruh DML dari [file ini](https://github.com/narahunter13/query-anomali-sakernas/blob/master/query_cumulative_anomaly.sql). Lalu, buka di SQLLab Fasih Dashboard.
