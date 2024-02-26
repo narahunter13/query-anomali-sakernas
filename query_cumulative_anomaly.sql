@@ -758,7 +758,7 @@ SELECT art.level_1_code                                                         
                 r57.b5r47b_value = 8312)
             AND r57.b5r46d_value IS NOT NULL
             AND r57.b5r46d_value <> 4
-        ) THEN 'A91,' END,
+        ) THEN 'A91,' END
        ) as Anomali,
        CONCAT('<a href="https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               art.assignment_id
