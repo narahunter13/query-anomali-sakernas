@@ -15,11 +15,19 @@ SELECT art.level_1_code                                                         
         -- Anomali 1
         CASE WHEN (
             art.b4k10 >= 5
-            AND r53.b5r13a_value = 4
-            AND r53.b5r20_value = 1
-            AND r53.b5r25a_value = 1
             AND r53.b5r14a_value IS NOT NULL
-            AND (r53.b5r14a_value < 84111 OR r53.b5r14a_value > 84300)
+            AND (r53.b5r14a_value = 59111 OR r53.b5r14a_value = 59121 OR r53.b5r14a_value = 59131 OR r53.b5r14a_value = 60101 OR
+                r53.b5r14a_value = 60201 OR r53.b5r14a_value = 63911 OR r53.b5r14a_value = 78411 OR r53.b5r14a_value = 78419 OR
+                (r53.b5r14a_value >= 84111 AND r53.b5r14a_value <= 84300) OR r53.b5r14a_value = 85111 OR
+                r53.b5r14a_value = 85112 OR r53.b5r14a_value = 85131 OR r53.b5r14a_value = 85210 OR r53.b5r14a_value = 85230 OR
+                r53.b5r14a_value = 85311 OR r53.b5r14a_value = 85312 OR r53.b5r14a_value = 85331 OR r53.b5r14a_value = 85430 OR
+                r53.b5r14a_value = 86101 OR r53.b5r14a_value = 86102 OR r53.b5r14a_value = 86104 OR r53.b5r14a_value = 87301 OR
+                r53.b5r14a_value = 87901 OR r53.b5r14a_value = 88101 OR r53.b5r14a_value = 88991 OR r53.b5r14a_value = 91011 OR
+                r53.b5r14a_value = 91021 OR r53.b5r14a_value = 91023)
+            AND r53.b5r13a_value IS NOT NULL
+            AND r53.b5r20_value IS NOT NULL
+            AND r53.b5r25a_value IS NOT NULL
+            AND (r53.b5r13a_value <> 4 OR r53.b5r20_value <> 1 OR r53.b5r25a_value <> 1)
         ) THEN 'A1,' END,
         -- Anomali 2
         CASE WHEN (
