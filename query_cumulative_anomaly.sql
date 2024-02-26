@@ -789,10 +789,25 @@ FROM tlg_ed6f1363.art_roster art
          LEFT JOIN tlg_ed6f1363.art_5th_7_roster r57
                    ON r57.assignment_id = art.assignment_id
                        AND r57.index1 = art.index1
+         LEFT JOIN tlg_ed6f1363.art_15th_9_roster r59
+                   ON r59.assignment_id = art.assignment_id
+                       AND r59.index1 = art.index1
         LEFT JOIN (SELECT pair_value, pair_label, assignment_id, index1
                     FROM tlg_ed6f1363.pair_label_value_1
                     WHERE data_key = 'b5r6g1_s'
                       AND pair_value = 'A') b5r6g1_s
                    ON b5r6g1_s.assignment_id = art.assignment_id
                        AND b5r6g1_s.index1 = art.index1
+        LEFT JOIN (SELECT pair_value, pair_label, assignment_id, index1
+                    FROM tlg_ed6f1363.pair_label_value_1
+                    WHERE data_key = 'b5r6g2_s'
+                      AND pair_value = 'A') b5r6g2_s
+                   ON b5r6g2_s.assignment_id = art.assignment_id
+                       AND b5r6g2_s.index1 = art.index1
+        LEFT JOIN (SELECT pair_value, pair_label, assignment_id, index1
+                    FROM tlg_ed6f1363.pair_label_value_1
+                    WHERE data_key = 'b5r6g3_s'
+                      AND pair_value = 'A') b5r6g3_s
+                   ON b5r6g3_s.assignment_id = art.assignment_id
+                       AND b5r6g3_s.index1 = art.index1
 ORDER BY art.level_6_full_code, r_root.no_dsrt, art.index1
