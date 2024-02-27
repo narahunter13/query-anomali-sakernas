@@ -601,6 +601,7 @@ SELECT art.level_1_code                                                         
             art.b4k10 >= 5
             AND (r51.b5r6a_value >= 4 AND r51.b5r6a_value <= 12)
             AND r51.b5r6b_j_kd_value IS NULL
+            AND asg.assignment_status_id = 2
         ) THEN 'A69,' END,
         -- Anomali 70
         CASE WHEN (
