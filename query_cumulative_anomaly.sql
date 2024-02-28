@@ -719,6 +719,16 @@ SELECT art.level_1_code                                                         
             AND r59.b5r55b_value IS NULL
             AND asg.assignment_status_id = 2
         ) THEN 'A86,' END,
+        -- Anomali 87
+        CASE WHEN (
+            r53.b5r22c_value = 1
+            AND r53.b5r22b_prov_value IS NOT NULL
+            AND r53.b5r22b_kab_value IS NOT NULL
+            AND r53.b5r22b_kab_value NOT IN (SELECT CONCAT(prov_tujuan, kab_tujuan) AS provkab_tujuan
+                                            FROM tlg_ed6f1363.master_komuter
+                                            WHERE prov_asal = art.level_1_code
+                                                AND kab_asal = art.level_2_code)
+        ) THEN 'A87,' END,
         -- Anomali 88
         CASE WHEN (
             r51.b5r2a_value = r51.b5r1a
