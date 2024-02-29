@@ -680,14 +680,14 @@ SELECT art.level_1_code                                                         
         -- Anomali 81
         CASE WHEN (
             art.b4k10 >= 5
-            AND r53.b5r20_value = 1
+            AND r54.b5r28_value = 1
             AND r54.b5r32a_value IS NULL
             AND asg.assignment_status_id = 2
         ) THEN 'A81,' END,
         -- Anomali 82
         CASE WHEN (
-            art.b4k10>=5
-            AND r53.b5r20_value=1
+            art.b4k10 >= 5
+            AND r54.b5r28_value = 1
             AND r54.b5r32b_value IS NULL
             AND asg.assignment_status_id = 2
         ) THEN 'A82,' END,
