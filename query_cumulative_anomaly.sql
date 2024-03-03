@@ -27,7 +27,7 @@ SELECT art.level_1_code                                                         
             AND r53.b5r13a_value IS NOT NULL
             AND r53.b5r20_value IS NOT NULL
             AND r53.b5r25a_value IS NOT NULL
-            AND (r53.b5r13a_value <> 4 OR r53.b5r20_value <> 1 OR r53.b5r25a_value <> 1)
+            AND (r53.b5r13a_value <> 4 OR r53.b5r20_value <> 1 OR r53.b5r25a_value > 2)
         ) THEN 'A1,' END,
         -- Anomali 2
         CASE WHEN (
