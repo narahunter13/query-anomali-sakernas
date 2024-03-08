@@ -781,7 +781,7 @@ SELECT art.level_1_code                                                         
        ) as Anomali,
        CONCAT('<a href="https://fasih-sm.bps.go.id/survey-collection/assignment-detail/',
               art.assignment_id
-           , '/57563bf6-4077-49c9-b6be-002389adcd91" target="_blank">Link Assignment</a>') AS Link
+           , '/08ccfdf5-9c7f-4379-9a4c-09ce265d20b9" target="_blank">Link Assignment</a>') AS Link
 FROM tlg_ed6f1363.art_roster art
          LEFT JOIN tlg_ed6f1363.root_table r_root
                    ON r_root.assignment_id = art.assignment_id
